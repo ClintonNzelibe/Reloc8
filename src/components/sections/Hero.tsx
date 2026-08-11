@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="absolute right-[35%] top-0 hidden h-full w-px bg-white/[0.04] lg:block" />
 
       <Container>
-        <div className="relative grid min-h-[calc(100vh-80px)] items-center gap-14 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-8 lg:py-20">
+        <div className="relative grid min-h-[calc(100vh-80px)] items-center gap-2 py-12 sm:py-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-8 lg:py-20">
 
           {/* LEFT */}
           <div className="relative z-10">
@@ -39,7 +39,7 @@ export default function Hero() {
             </div>
 
             {/* Heading */}
-            <h1 className="max-w-3xl text-5xl font-black leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-7xl xl:text-[5.4rem]">
+            <h1 className="max-w-3xl text-4xl font-black leading-[0.98] tracking-[-0.04em] sm:text-5xl lg:text-7xl xl:text-[5.4rem]">
               Moving what
               <span className="block text-white">
                 matters

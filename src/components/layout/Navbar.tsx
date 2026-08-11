@@ -83,7 +83,7 @@ export default function Navbar() {
                     key={item.id}
                     type="button"
                     onClick={() => scrollToSection(item.id)}
-                    className="group relative flex items-center gap-2 rounded-full px-4 py-2.5 text-[13px] font-semibold text-[#0B1F33] transition duration-300 hover:bg-white hover:text-[#F97316] hover:shadow-sm"
+                    className="group flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-semibold text-[#0B1F33] transition hover:bg-orange-50 hover:text-[#F97316]"
                   >
                     {isTracking && (
                       <MapPinned
