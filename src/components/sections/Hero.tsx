@@ -1,192 +1,115 @@
-// import Button from "../ui/Button";
-// import Container from "../ui/Container";
-// import { demo } from "../../config/demo";
-// import { motion } from "motion/react";
-
-// export default function Hero() {
-//   return (
-//     <section className="relative overflow-hidden bg-white pt-32 pb-24">
-
-//       {/* Background Blur */}
-//       <div className="absolute -left-40 top-10 h-[450px] w-[450px] rounded-full bg-blue-500/10 blur-[120px]" />
-
-//       <div className="absolute -right-40 bottom-0 h-[450px] w-[450px] rounded-full bg-cyan-400/10 blur-[120px]" />
-
-//       <Container>
-//         <div className="relative mx-auto max-w-4xl text-center">
-
-//           {/* Badge */}
-
-//           <div className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700">
-//             {demo.hero.badge}
-//           </div>
-
-//           {/* Heading */}
-
-//           <h1 className="mt-8 text-5xl font-black leading-[1.05] tracking-tight text-slate-900 md:text-7xl">
-//             Building Digital
-//             <br />
-
-//             <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 bg-clip-text text-transparent">
-//               Experiences
-//             </span>
-
-//             <br />
-
-//             That Drive Growth.
-//           </h1>
-
-//           {/* Description */}
-
-//           <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600">
-//             We help ambitious businesses launch premium websites,
-//             web applications and digital platforms that build trust,
-//             attract customers and accelerate growth.
-//           </p>
-
-//           {/* Buttons */}
-
-//           <motion.div
-//                 className="mt-12 flex flex-wrap justify-center gap-5"
-//                 initial={{ opacity: 0, y: 30 }}
-//                 animate={{ opacity: 1, y: 0 }}
-//                 transition={{
-//                   delay: 0.4,
-//                   duration: 0.6,
-//                 }}
-//               >
-
-//             <Button>
-//               {demo.hero.primaryButton}
-//             </Button>
-
-//             <Button variant="secondary">
-//               {demo.hero.secondaryButton}
-//             </Button>
-
-//          </motion.div>
-
-//           {/* Trust Row */}
-
-//           <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm font-medium text-slate-500">
-
-//             <span>✓ Responsive Design</span>
-
-//             <span>✓ Modern Technology</span>
-
-//             <span>✓ Fast Performance</span>
-
-//             <span>✓ Ongoing Support</span>
-
-//           </div>
-
-//         </div>
-//       </Container>
-//     </section>
-//   );
-// }
-import { ArrowRight, CalendarDays } from "lucide-react";
+import {
+  ArrowRight,
+  MapPin,
+  PackageCheck,
+  Truck,
+  Navigation,
+} from "lucide-react";
 
 import Container from "../ui/Container";
 import { demo } from "../../config/demo";
-import heroImage from "../../assets/hospital-hero.png";
+import heroImage from "../../assets/logistics/hero.png";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-10 sm:py-16 md:py-24 lg:py-28"
+      className="relative overflow-hidden bg-[#071521] text-white"
     >
-      {/* Background Glow */}
+      {/* Background details */}
+      <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#2563EB]/10 blur-3xl" />
 
-      <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl sm:h-80 sm:w-80" />
+      <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#F97316]/10 blur-3xl" />
 
-      <div className="absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl sm:h-80 sm:w-80" />
+      <div className="absolute right-[35%] top-0 hidden h-full w-px bg-white/[0.04] lg:block" />
 
       <Container>
-        <div className="relative grid items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="relative grid min-h-[calc(100vh-80px)] items-center gap-14 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-8 lg:py-20">
 
-          {/* Left Content */}
+          {/* LEFT */}
+          <div className="relative z-10">
 
-          <div className="text-center lg:text-left">
+            {/* Eyebrow */}
+            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2.5 backdrop-blur-sm">
+              <span className="flex h-2.5 w-2.5 rounded-full bg-[#F97316] shadow-[0_0_12px_#F97316]" />
 
-            {/* Badge */}
-
-            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-blue-200 bg-white/90 px-3 py-2 text-[11px] font-medium text-blue-700 shadow-sm sm:px-4 sm:text-sm">
-              <span className="h-2 w-2 shrink-0 rounded-full bg-blue-600" />
-              <span>{demo.hero.badge}</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
+                {demo.hero.badge}
+              </span>
             </div>
 
             {/* Heading */}
+            <h1 className="max-w-3xl text-5xl font-black leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-7xl xl:text-[5.4rem]">
+              Moving what
+              <span className="block text-white">
+                matters
+                <span className="text-[#F97316]">.</span>
+              </span>
 
-            <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight text-slate-900 sm:mt-7 sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl">
-              {demo.hero.title}
+              <span className="mt-2 block text-slate-400">
+                Wherever it needs to go.
+              </span>
             </h1>
 
-            {/* Subtitle */}
+            {/* Orange divider */}
+            <div className="mt-8 h-1.5 w-20 rounded-full bg-[#F97316]" />
 
-            <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl lg:mx-0">
+            {/* Description */}
+            <p className="mt-8 max-w-xl text-base leading-7 text-slate-400 sm:text-lg sm:leading-8">
               {demo.hero.subtitle}
             </p>
 
             {/* Buttons */}
-
-            <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center sm:justify-center lg:justify-start">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
 
               <a
                 href="/#contact"
-                className="w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F97316] px-7 py-4 text-sm font-bold text-white shadow-lg shadow-orange-500/20 transition duration-300 hover:-translate-y-1 hover:bg-orange-500 hover:shadow-xl"
               >
-                <button
-                  type="button"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-xl sm:px-7 sm:py-4"
-                >
-                  <CalendarDays size={18} />
-                  {demo.hero.primaryButton}
-                </button>
+                <PackageCheck size={19} />
+                {demo.hero.primaryButton}
               </a>
 
               <a
-                href="/#services"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:text-blue-600 sm:w-auto sm:px-7 sm:py-4"
+                href="/#tracking"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-7 py-4 text-sm font-bold text-white backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
               >
-                {demo.hero.secondaryButton}
+                Track Shipment
                 <ArrowRight size={18} />
               </a>
 
             </div>
 
-            {/* Trust Indicators */}
+            {/* Mini trust row */}
+            <div className="mt-12 grid max-w-xl grid-cols-3 border-t border-white/10 pt-7">
 
-            <div className="mx-auto mt-8 grid max-w-xl grid-cols-3 gap-2 border-t border-slate-200 pt-6 sm:mt-10 sm:gap-6 sm:pt-8 lg:mx-0">
-
-              <div>
-                <h3 className="text-2xl font-black text-slate-900 sm:text-3xl">
-                  24/7
-                </h3>
-
-                <p className="mt-1 text-[10px] text-slate-500 sm:text-sm">
-                  Emergency Care
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-black text-slate-900 sm:text-3xl">
-                  25+
-                </h3>
-
-                <p className="mt-1 text-[10px] text-slate-500 sm:text-sm">
-                  Medical Specialists
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-black text-slate-900 sm:text-3xl">
+              <div className="border-r border-white/10 pr-4">
+                <p className="text-2xl font-black sm:text-3xl">
                   10K+
-                </h3>
+                </p>
 
-                <p className="mt-1 text-[10px] text-slate-500 sm:text-sm">
-                  Patients Served
+                <p className="mt-1 text-xs text-slate-500 sm:text-sm">
+                  Deliveries
+                </p>
+              </div>
+
+              <div className="border-r border-white/10 px-4">
+                <p className="text-2xl font-black sm:text-3xl">
+                  25+
+                </p>
+
+                <p className="mt-1 text-xs text-slate-500 sm:text-sm">
+                  Routes Covered
+                </p>
+              </div>
+
+              <div className="pl-4">
+                <p className="text-2xl font-black sm:text-3xl">
+                  98%
+                </p>
+
+                <p className="mt-1 text-xs text-slate-500 sm:text-sm">
+                  On-Time
                 </p>
               </div>
 
@@ -194,40 +117,127 @@ export default function Hero() {
 
           </div>
 
-          {/* Hero Image */}
+          {/* RIGHT */}
+          <div className="relative z-10">
 
-          <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
+            {/* Main image */}
+            <div className="relative mx-auto max-w-2xl">
 
-            <div className="absolute inset-8 rounded-[40px] bg-blue-500/20 blur-3xl" />
+              {/* Orange glow */}
+              <div className="absolute -inset-6 rounded-[50px] bg-[#F97316]/10 blur-3xl" />
 
-            <div className="relative overflow-hidden rounded-[28px] border border-white/70 bg-white p-2 shadow-2xl sm:rounded-[36px] sm:p-3">
+              <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-[#0B1F33] p-2 shadow-2xl">
 
-              <img
-                src={heroImage}
-                alt="African healthcare professional providing patient care"
-                className="h-[360px] w-full rounded-[22px] object-cover object-center sm:h-[460px] sm:rounded-[30px] lg:h-[540px]"
-              />
+                <div className="relative overflow-hidden rounded-[34px]">
 
-              {/* Floating Card */}
+                  <img
+                    src={heroImage}
+                    alt="Reloc8 logistics truck transporting goods"
+                    className="h-[460px] w-full object-cover object-center sm:h-[560px] lg:h-[620px]"
+                  />
 
-              <div className="absolute bottom-5 left-4 right-4 rounded-2xl border border-white/50 bg-white/90 p-3 shadow-xl backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-5">
+                  {/* Image overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071521]/80 via-transparent to-transparent" />
 
-                <div className="flex items-center gap-3 sm:gap-4">
+                  {/* Top label */}
+                  <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/20 bg-[#071521]/70 px-4 py-2.5 backdrop-blur-md">
+                    <Truck
+                      size={16}
+                      className="text-[#F97316]"
+                    />
 
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-100 sm:h-12 sm:w-12">
-                    <CalendarDays
-                      className="text-blue-600"
-                      size={20}
+                    <span className="text-xs font-semibold text-white">
+                      RELOC8 FLEET
+                    </span>
+                  </div>
+
+                  {/* Bottom image label */}
+                  <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/10 bg-[#071521]/85 p-5 backdrop-blur-md">
+
+                    <div className="flex items-center justify-between gap-4">
+
+                      <div>
+                        <p className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                          Current route
+                        </p>
+
+                        <p className="mt-1 text-lg font-bold">
+                          Lagos → Ibadan
+                        </p>
+                      </div>
+
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F97316]">
+                        <Navigation
+                          size={20}
+                          className="text-white"
+                        />
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+              {/* Route Card */}
+              <div className="absolute -left-5 top-20 hidden w-52 rounded-2xl border border-slate-200/10 bg-white p-4 text-[#0B1F33] shadow-2xl sm:block lg:-left-12">
+
+                <div className="flex items-center gap-3">
+
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100">
+                    <MapPin
+                      size={19}
+                      className="text-[#F97316]"
                     />
                   </div>
 
                   <div>
-                    <p className="text-xs font-semibold text-slate-900 sm:text-sm">
-                      Need medical attention?
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                      Route
                     </p>
 
-                    <p className="mt-1 text-[10px] leading-4 text-slate-500 sm:text-xs sm:leading-5">
-                      Book an appointment with our medical team.
+                    <p className="mt-1 text-sm font-bold">
+                      Lagos — Ibadan
+                    </p>
+                  </div>
+
+                </div>
+
+                <div className="mt-4 flex items-center gap-2">
+                  <div className="h-1.5 flex-1 rounded-full bg-[#F97316]" />
+                  <div className="h-1.5 w-10 rounded-full bg-slate-200" />
+                </div>
+
+                <p className="mt-2 text-xs text-slate-500">
+                  Active delivery route
+                </p>
+
+              </div>
+
+              {/* Status Card */}
+              <div className="absolute -bottom-6 -right-4 hidden w-60 rounded-2xl border border-slate-200/10 bg-white p-4 text-[#0B1F33] shadow-2xl sm:block lg:-right-10">
+
+                <div className="flex items-center gap-3">
+
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-100">
+                    <Truck
+                      size={19}
+                      className="text-green-600"
+                    />
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="h-2 w-2 rounded-full bg-green-500" />
+
+                      <p className="text-xs font-bold text-green-600">
+                        IN TRANSIT
+                      </p>
+                    </div>
+
+                    <p className="mt-1 text-sm font-bold">
+                      Shipment moving
                     </p>
                   </div>
 

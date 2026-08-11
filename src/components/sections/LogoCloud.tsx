@@ -1,34 +1,36 @@
 import Container from "../ui/Container";
 
-const companies = [
-  "Google",
-  "Microsoft",
-  "Stripe",
-  "Notion",
-  "Spotify",
-  "Slack",
+const locations = [
+  "Lagos",
+  "Ibadan",
+  "Lekki",
+  "Victoria Island",
+  "Ikeja",
+  "Beyond",
 ];
 
 export default function LogoCloud() {
   return (
-    <section className="border-y border-slate-200 bg-slate-50 py-10">
+    <section className="border-y border-slate-200 bg-white py-10">
       <Container>
-
         <p className="mb-8 text-center text-sm font-semibold uppercase tracking-widest text-slate-500">
-          Inspired by world-class companies
+          Moving across key destinations
         </p>
 
-        <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-6">
-          {companies.map((company) => (
+        <div className="grid grid-cols-2 gap-6 text-center sm:grid-cols-3 md:grid-cols-6">
+          {locations.map((location, index) => (
             <div
-              key={company}
-              className="text-lg font-bold text-slate-400 transition hover:text-slate-900"
+              key={location}
+              className={`text-sm font-bold transition hover:text-[#F97316] ${
+                index === 0
+                  ? "text-[#0B1F33]"
+                  : "text-slate-400"
+              }`}
             >
-              {company}
+              {location}
             </div>
           ))}
         </div>
-
       </Container>
     </section>
   );

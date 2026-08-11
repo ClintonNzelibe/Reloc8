@@ -1,3 +1,3 @@
-import { hospital } from "../demos/hospital";
+import { logistics } from "../demos/logistics";
 
-export const demo = hospital;
+export const demo = logistics;
